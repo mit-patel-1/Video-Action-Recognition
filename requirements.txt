@@ -1,0 +1,10 @@
+torch
+torchvision
+opencv-python
+scikit-learn
+tqdm
+numpy
+Pillow
+pytest
+pylint>=3.3,<4
+wandb>=0.26,<0.27

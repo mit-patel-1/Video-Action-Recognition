@@ -1,0 +1,24 @@
+#!/bin/bash
+python run.py \
+    --frame_dir UCF50_frames \
+    --train_size 0.75 \
+    --test_size 0.15 \
+    --model_type lrcn \
+    --n_classes 50 \
+    --fr_per_vid 16 \
+    --batch_size 16 \
+    --n_epochs 50 \
+    --rnn_n_layers 1 \
+    --rnn_hidden_size 100 \
+    --dropout 0.1 \
+    --cnn_backbone r2plus1d_18 \
+    --video_dir data/UCF50 \
+    --clip_fps 15 \
+    --eval_clips 3 \
+    --learning_rate 0.001 \
+    --backbone_learning_rate 0.00001 \
+    --staged_finetune \
+    --output_dir models/training-video-final \
+    --run_name training \
+    --wandb \
+    --mode 'train'
